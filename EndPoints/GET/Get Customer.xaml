@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Get_Customer" this:Get_Customer.in_merchanttoken="B3D50B55-65CE-4B7B-8FE5-AB1B4F5CEDA7" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:ca="clr-namespace:CommonLibrary.Asset;assembly=CommonLibrary" xmlns:cr="clr-namespace:CommonLibrary.Report;assembly=CommonLibrary" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uta="clr-namespace:UiPath.Testing.Activities;assembly=UiPath.Testing.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Get_Customer" this:Get_Customer.in_merchanttoken="B3D50B55-65CE-4B7B-8FE5-AB1B4F5CEDA7" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:ca="clr-namespace:CommonLibrary.Asset;assembly=CommonLibrary" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:ra="clr-namespace:ReporterForUiPath.Activities;assembly=ReporterForUiPath.Activities" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uta="clr-namespace:UiPath.Testing.Activities;assembly=UiPath.Testing.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_token" Type="InArgument(x:String)" />
     <x:Property Name="in_merchanttoken" Type="InArgument(x:String)" />
@@ -13,7 +13,7 @@
   </this:Get_Customer.in_ReportID>
   <sap2010:Annotation.AnnotationText>UPTF00000088eyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8SW5pdGlhbFRvb2x0aXA+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8VmVyc2lvbj5rX19CYWNraW5nRmllbGQiOjF9</sap2010:Annotation.AnnotationText>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>881.3333333333334,564</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>845.3333333333334,3220</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -53,6 +53,8 @@
       <x:String>System.Dynamic</x:String>
       <x:String>System.ComponentModel</x:String>
       <x:String>System.Collections.Specialized</x:String>
+      <x:String>ReporterForUiPath.Enums</x:String>
+      <x:String>ReporterForUiPath.Activities</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -117,17 +119,18 @@
       <AssemblyReference>System.Collections.Specialized</AssemblyReference>
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
       <AssemblyReference>DPP_APILibrary.Core</AssemblyReference>
+      <AssemblyReference>ReporterForUiPath</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="496,499.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_8">
+  <Sequence sap:VirtualizedContainerService.HintSize="596.6666666666666,3155.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_8">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="434,388.6666666666667" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="534.6666666666666,3044.6666666666665" sap2010:WorkflowViewState.IdRef="TryCatch_2">
       <TryCatch.Try>
-        <Sequence DisplayName="Get_Customer" sap:VirtualizedContainerService.HintSize="496,2778.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_1">
+        <Sequence DisplayName="Get_Customer" sap:VirtualizedContainerService.HintSize="496,2805.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_1">
           <Sequence.Variables>
             <Variable x:TypeArguments="x:String" Name="str_endpointurl" />
             <Variable x:TypeArguments="x:String" Name="restResponse" />
@@ -226,7 +229,7 @@
               </InArgument>
             </uta:VerifyExpression.Expression>
           </uta:VerifyExpression>
-          <If sap:VirtualizedContainerService.HintSize="434,956" sap2010:WorkflowViewState.IdRef="If_1">
+          <If sap:VirtualizedContainerService.HintSize="434,818.6666666666666" sap2010:WorkflowViewState.IdRef="If_1">
             <If.Condition>
               <InArgument x:TypeArguments="x:Boolean">
                 <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_8">statusCode.Equals(200) == true</CSharpValue>
@@ -239,7 +242,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <If.Then>
-              <Sequence sap:VirtualizedContainerService.HintSize="376,536.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_2">
+              <Sequence sap:VirtualizedContainerService.HintSize="376,317.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_2">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="x:String" Name="str_in_testId" />
                 </Sequence.Variables>
@@ -266,34 +269,28 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:LogMessage>
-                <cr:passedStep Actual_Result="Response generated as 200" Expected_Result="Response generated should be 200" sap:VirtualizedContainerService.HintSize="334,355.3333333333333" sap2010:WorkflowViewState.IdRef="passedStep_1" str_in_actualStep="Response code verification for Get customer" str_in_expectedStep="Step ">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <cr:passedStep.str_in_reportId>
+                <ra:StepStatus CodeBlock="{x:Null}" ContinueOnError="{x:Null}" statusInfo="{x:Null}" ActualResult="Response generated as 200" DisplayName="Step Status Pass" ExpectedResult="Response generated should be 200" sap:VirtualizedContainerService.HintSize="334,136" sap2010:WorkflowViewState.IdRef="StepStatus_1" Status="Pass" StepDescription="Response code verification for Get Customer" StepName="Step " TakeScreenshot="False">
+                  <ra:StepStatus.ReportId>
                     <InArgument x:TypeArguments="x:Int32">
-                      <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_11">in_ReportID</CSharpValue>
+                      <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_39">in_ReportID</CSharpValue>
                     </InArgument>
-                  </cr:passedStep.str_in_reportId>
-                  <cr:passedStep.str_in_testId>
+                  </ra:StepStatus.ReportId>
+                  <ra:StepStatus.TestId>
                     <InArgument x:TypeArguments="x:String">
-                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_12">out_TestID</CSharpValue>
+                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_40">out_TestID</CSharpValue>
                     </InArgument>
-                  </cr:passedStep.str_in_testId>
-                </cr:passedStep>
+                  </ra:StepStatus.TestId>
+                </ra:StepStatus>
               </Sequence>
             </If.Then>
             <If.Else>
-              <Sequence sap:VirtualizedContainerService.HintSize="300,235.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_3">
+              <Sequence sap:VirtualizedContainerService.HintSize="376,317.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_3">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="258,54" sap2010:WorkflowViewState.IdRef="LogMessage_2">
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,54" sap2010:WorkflowViewState.IdRef="LogMessage_2">
                   <ui:LogMessage.Level>
                     <InArgument x:TypeArguments="ui:LogLevel">
                       <CSharpValue x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="CSharpValue`1_14">UiPath.Core.Activities.LogLevel.Info</CSharpValue>
@@ -311,24 +308,18 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:LogMessage>
-                <cr:failedStep Actual_Result="Failed to generate response 200" Expected_Result="Response generated should be 200" sap:VirtualizedContainerService.HintSize="258,54" sap2010:WorkflowViewState.IdRef="failedStep_1" str_in_actualStep="Response code verification for get customer" str_in_expectedStep="Step ">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <cr:failedStep.str_in_reportId>
+                <ra:StepStatus CodeBlock="{x:Null}" ContinueOnError="{x:Null}" statusInfo="{x:Null}" ActualResult="Failed to generate response 200" DisplayName="Step Status Fail" ExpectedResult="Response generated should be 200" sap:VirtualizedContainerService.HintSize="334,136" sap2010:WorkflowViewState.IdRef="StepStatus_2" Status="Fail" StepDescription="Response code verification for Get Customer" StepName="Step " TakeScreenshot="False">
+                  <ra:StepStatus.ReportId>
                     <InArgument x:TypeArguments="x:Int32">
-                      <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_15">in_ReportID</CSharpValue>
+                      <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_41">in_ReportID</CSharpValue>
                     </InArgument>
-                  </cr:failedStep.str_in_reportId>
-                  <cr:failedStep.str_in_testId>
+                  </ra:StepStatus.ReportId>
+                  <ra:StepStatus.TestId>
                     <InArgument x:TypeArguments="x:String">
-                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_16">out_TestID</CSharpValue>
+                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_42">out_TestID</CSharpValue>
                     </InArgument>
-                  </cr:failedStep.str_in_testId>
-                </cr:failedStep>
+                  </ra:StepStatus.TestId>
+                </ra:StepStatus>
               </Sequence>
             </If.Else>
           </If>
@@ -363,7 +354,7 @@
               </InArgument>
             </uta:VerifyExpression.Expression>
           </uta:VerifyExpression>
-          <If sap:VirtualizedContainerService.HintSize="434,654.6666666666666" sap2010:WorkflowViewState.IdRef="If_2">
+          <If sap:VirtualizedContainerService.HintSize="434,818.6666666666666" sap2010:WorkflowViewState.IdRef="If_2">
             <If.Condition>
               <InArgument x:TypeArguments="x:Boolean">
                 <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_34">restResponse.Contains("customerId") == true</CSharpValue>
@@ -376,7 +367,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <If.Then>
-              <Sequence sap:VirtualizedContainerService.HintSize="300,235.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_5">
+              <Sequence sap:VirtualizedContainerService.HintSize="376,317.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_5">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="x:String" Name="str_in_testId" />
                 </Sequence.Variables>
@@ -385,7 +376,7 @@
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="258,54" sap2010:WorkflowViewState.IdRef="LogMessage_4">
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,54" sap2010:WorkflowViewState.IdRef="LogMessage_4">
                   <ui:LogMessage.Level>
                     <InArgument x:TypeArguments="ui:LogLevel">
                       <CSharpValue x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="CSharpValue`1_26">UiPath.Core.Activities.LogLevel.Info</CSharpValue>
@@ -403,34 +394,28 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:LogMessage>
-                <cr:passedStep Actual_Result="Customers displayed in Response" Expected_Result="Customers should be displayed in Response" sap:VirtualizedContainerService.HintSize="258,54" sap2010:WorkflowViewState.IdRef="passedStep_2" str_in_actualStep="Customer list generation verification" str_in_expectedStep="Step ">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <cr:passedStep.str_in_reportId>
+                <ra:StepStatus CodeBlock="{x:Null}" ContinueOnError="{x:Null}" statusInfo="{x:Null}" ActualResult="Customers displayed in Response" DisplayName="Step Status Pass" ExpectedResult="Customers should be displayed in Response" sap:VirtualizedContainerService.HintSize="334,136" sap2010:WorkflowViewState.IdRef="StepStatus_4" Status="Pass" StepDescription="Customer list generation verification" StepName="Step " TakeScreenshot="False">
+                  <ra:StepStatus.ReportId>
                     <InArgument x:TypeArguments="x:Int32">
-                      <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_27">in_ReportID</CSharpValue>
+                      <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_43">in_ReportID</CSharpValue>
                     </InArgument>
-                  </cr:passedStep.str_in_reportId>
-                  <cr:passedStep.str_in_testId>
+                  </ra:StepStatus.ReportId>
+                  <ra:StepStatus.TestId>
                     <InArgument x:TypeArguments="x:String">
-                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_28">out_TestID</CSharpValue>
+                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_44">out_TestID</CSharpValue>
                     </InArgument>
-                  </cr:passedStep.str_in_testId>
-                </cr:passedStep>
+                  </ra:StepStatus.TestId>
+                </ra:StepStatus>
               </Sequence>
             </If.Then>
             <If.Else>
-              <Sequence sap:VirtualizedContainerService.HintSize="300,235.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_6">
+              <Sequence sap:VirtualizedContainerService.HintSize="376,317.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_6">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="258,54" sap2010:WorkflowViewState.IdRef="LogMessage_5">
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,54" sap2010:WorkflowViewState.IdRef="LogMessage_5">
                   <ui:LogMessage.Level>
                     <InArgument x:TypeArguments="ui:LogLevel">
                       <CSharpValue x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="CSharpValue`1_30">UiPath.Core.Activities.LogLevel.Info</CSharpValue>
@@ -448,34 +433,28 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:LogMessage>
-                <cr:failedStep Actual_Result="Failed to display customers in Response" Expected_Result="Customers should be displayed in Response" sap:VirtualizedContainerService.HintSize="258,54" sap2010:WorkflowViewState.IdRef="failedStep_2" str_in_actualStep="Customer list generation verification" str_in_expectedStep="Step ">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <cr:failedStep.str_in_reportId>
+                <ra:StepStatus CodeBlock="{x:Null}" ContinueOnError="{x:Null}" statusInfo="{x:Null}" ActualResult="Failed to display customers in Response" DisplayName="Step Status Fail" ExpectedResult="Customers should be displayed in Response" sap:VirtualizedContainerService.HintSize="334,136" sap2010:WorkflowViewState.IdRef="StepStatus_3" Status="Fail" StepDescription="Customer list generation verification" StepName="Step " TakeScreenshot="False">
+                  <ra:StepStatus.ReportId>
                     <InArgument x:TypeArguments="x:Int32">
-                      <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_31">in_ReportID</CSharpValue>
+                      <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_45">in_ReportID</CSharpValue>
                     </InArgument>
-                  </cr:failedStep.str_in_reportId>
-                  <cr:failedStep.str_in_testId>
+                  </ra:StepStatus.ReportId>
+                  <ra:StepStatus.TestId>
                     <InArgument x:TypeArguments="x:String">
-                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_32">out_TestID</CSharpValue>
+                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_46">out_TestID</CSharpValue>
                     </InArgument>
-                  </cr:failedStep.str_in_testId>
-                </cr:failedStep>
+                  </ra:StepStatus.TestId>
+                </ra:StepStatus>
               </Sequence>
             </If.Else>
           </If>
         </Sequence>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,215.33333333333334" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="500.6666666666667,22" sap2010:WorkflowViewState.IdRef="Catch`1_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>

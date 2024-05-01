@@ -31,7 +31,7 @@
     <InArgument x:TypeArguments="x:String" />
   </this:PaymentMethod.out_TestID>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>849.3333333333334,3262</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>881.3333333333334,3262</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -222,7 +222,7 @@
                 </Assign.Value>
               </Assign>
             </Sequence>
-            <Sequence x:Key="ACH" sap:VirtualizedContainerService.HintSize="496,322" sap2010:WorkflowViewState.IdRef="Sequence_11">
+            <Sequence x:Key="ACH" sap:VirtualizedContainerService.HintSize="496,318.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_11">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>

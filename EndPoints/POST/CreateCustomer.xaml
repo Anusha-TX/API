@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="CreateCustomer" this:CreateCustomer.in_merchanttoken="B3D50B55-65CE-4B7B-8FE5-AB1B4F5CEDA7" this:CreateCustomer.str_in_CustEmail="test@gmail.com" this:CreateCustomer.str_in_FirstName="Dalexyzsd" this:CreateCustomer.str_in_LastName="John" this:CreateCustomer.str_in_CustomerAddress="Address123" this:CreateCustomer.str_in_CustomerZipCode="12334" this:CreateCustomer.str_in_CustomerCity="city" this:CreateCustomer.str_in_CustomerSateCode="state" this:CreateCustomer.str_in_CustomerCountryCode="country" this:CreateCustomer.str_in_CustPhoneNumber="9866812622" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:ca="clr-namespace:CommonLibrary.Asset;assembly=CommonLibrary" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:ra="clr-namespace:ReporterForUiPath.Activities;assembly=ReporterForUiPath.Activities" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uta="clr-namespace:UiPath.Testing.Activities;assembly=UiPath.Testing.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="CreateCustomer" this:CreateCustomer.in_merchanttoken="B3D50B55-65CE-4B7B-8FE5-AB1B4F5CEDA7" this:CreateCustomer.str_in_CustEmail="test@gmail.com" this:CreateCustomer.str_in_FirstName="Dalexywsszsd" this:CreateCustomer.str_in_LastName="John" this:CreateCustomer.str_in_CustomerAddress="Address123" this:CreateCustomer.str_in_CustomerZipCode="12334" this:CreateCustomer.str_in_CustomerCity="city" this:CreateCustomer.str_in_CustomerSateCode="state" this:CreateCustomer.str_in_CustomerCountryCode="country" this:CreateCustomer.str_in_CustPhoneNumber="9866812622" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:ca="clr-namespace:CommonLibrary.Asset;assembly=CommonLibrary" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:ra="clr-namespace:ReporterForUiPath.Activities;assembly=ReporterForUiPath.Activities" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uta="clr-namespace:UiPath.Testing.Activities;assembly=UiPath.Testing.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_token" Type="InArgument(x:String)" />
     <x:Property Name="in_ReportID" Type="InArgument(x:Int32)" />
@@ -22,7 +22,7 @@
     <InArgument x:TypeArguments="x:String" />
   </this:CreateCustomer.out_TestID>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>881.3333333333334,2080</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>881.3333333333334,2180.6666666666665</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -132,22 +132,23 @@
       <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
       <AssemblyReference>System.Memory</AssemblyReference>
       <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>DPP_APILibrary.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="CreateCustomer" sap:VirtualizedContainerService.HintSize="596.6666666666666,2015.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="CreateCustomer" sap:VirtualizedContainerService.HintSize="596.6666666666666,2116" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="534.6666666666666,1904.6666666666667" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="534.6666666666666,2005.3333333333333" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <Sequence DisplayName="CreateCustomer" sap:VirtualizedContainerService.HintSize="496,1665.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence DisplayName="CreateCustomer" sap:VirtualizedContainerService.HintSize="496,1610.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <Sequence.Variables>
             <Variable x:TypeArguments="njl:JObject" Name="jsonDocument" />
             <Variable x:TypeArguments="x:String" Name="restResponse" />
@@ -242,18 +243,6 @@
               </InArgument>
             </ui:DeserializeJson.JsonString>
           </ui:DeserializeJson>
-          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_10">
-            <ui:LogMessage.Level>
-              <InArgument x:TypeArguments="ui:LogLevel">
-                <CSharpValue x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="CSharpValue`1_86">UiPath.Core.Activities.LogLevel.Warn</CSharpValue>
-              </InArgument>
-            </ui:LogMessage.Level>
-            <ui:LogMessage.Message>
-              <InArgument x:TypeArguments="x:Object">
-                <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_85">jsonDocument</CSharpValue>
-              </InArgument>
-            </ui:LogMessage.Message>
-          </ui:LogMessage>
           <Assign sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_2">
             <Assign.To>
               <OutArgument x:TypeArguments="x:String">
@@ -271,7 +260,7 @@
               </InArgument>
             </uta:VerifyExpression.Expression>
           </uta:VerifyExpression>
-          <If sap:VirtualizedContainerService.HintSize="434,54" sap2010:WorkflowViewState.IdRef="If_1">
+          <If sap:VirtualizedContainerService.HintSize="434,184" sap2010:WorkflowViewState.IdRef="If_1">
             <If.Condition>
               <InArgument x:TypeArguments="x:Boolean">
                 <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_8">statusCode.Equals(200) == true</CSharpValue>
@@ -279,12 +268,12 @@
             </If.Condition>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <If.Then>
-              <Sequence sap:VirtualizedContainerService.HintSize="376,408" sap2010:WorkflowViewState.IdRef="Sequence_3">
+              <Sequence sap:VirtualizedContainerService.HintSize="376,317.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_3">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="x:String" Name="str_in_testId" />
                 </Sequence.Variables>
@@ -293,7 +282,7 @@
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1">
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,54" sap2010:WorkflowViewState.IdRef="LogMessage_1">
                   <ui:LogMessage.Level>
                     <InArgument x:TypeArguments="ui:LogLevel">
                       <CSharpValue x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="CSharpValue`1_10">UiPath.Core.Activities.LogLevel.Info</CSharpValue>
@@ -306,12 +295,12 @@
                   </ui:LogMessage.Message>
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:LogMessage>
-                <ra:StepStatus CodeBlock="{x:Null}" ContinueOnError="{x:Null}" statusInfo="{x:Null}" ActualResult="Response generated as 200" DisplayName="Step Status Pass" ExpectedResult="Response generated should be 200" sap:VirtualizedContainerService.HintSize="334,136" sap2010:WorkflowViewState.IdRef="StepStatus_1" Status="Pass" StepDescription="Response code verification for Payment Creation" StepName="Step " TakeScreenshot="False">
+                <ra:StepStatus CodeBlock="{x:Null}" ContinueOnError="{x:Null}" statusInfo="{x:Null}" ActualResult="Response generated as 200" DisplayName="Step Status Pass" ExpectedResult="Response generated should be 200" sap:VirtualizedContainerService.HintSize="334,136" sap2010:WorkflowViewState.IdRef="StepStatus_1" Status="Pass" StepDescription="Response code verification for Customer Creation" StepName="Step " TakeScreenshot="False">
                   <ra:StepStatus.ReportId>
                     <InArgument x:TypeArguments="x:Int32">
                       <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_11">in_ReportID</CSharpValue>
@@ -350,7 +339,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:LogMessage>
-                <ra:StepStatus CodeBlock="{x:Null}" ContinueOnError="{x:Null}" statusInfo="{x:Null}" ActualResult="Failed to generate response 200" DisplayName="Step Status Fail" ExpectedResult="Response generated should be 200" sap:VirtualizedContainerService.HintSize="334,136" sap2010:WorkflowViewState.IdRef="StepStatus_2" Status="Fail" StepDescription="Response code verification for Payment Creation" StepName="Step " TakeScreenshot="False">
+                <ra:StepStatus CodeBlock="{x:Null}" ContinueOnError="{x:Null}" statusInfo="{x:Null}" ActualResult="Failed to generate response 200" DisplayName="Step Status Fail" ExpectedResult="Response generated should be 200" sap:VirtualizedContainerService.HintSize="334,136" sap2010:WorkflowViewState.IdRef="StepStatus_2" Status="Fail" StepDescription="Response code verification for Customer Creation" StepName="Step " TakeScreenshot="False">
                   <ra:StepStatus.ReportId>
                     <InArgument x:TypeArguments="x:Int32">
                       <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_15">in_ReportID</CSharpValue>
@@ -531,7 +520,7 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
             </ActivityAction.Argument>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="200,54" sap2010:WorkflowViewState.IdRef="LogMessage_9">
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_9">
               <ui:LogMessage.Level>
                 <InArgument x:TypeArguments="ui:LogLevel">
                   <CSharpValue x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="CSharpValue`1_71">UiPath.Core.Activities.LogLevel.Error</CSharpValue>

@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="StandaloneRefund" this:StandaloneRefund.str_in_Expiry="11/33" this:StandaloneRefund.str_in_CardNumber="4111111111111110" this:StandaloneRefund.dbl_in_Amount="1" this:StandaloneRefund.str_in_currency="USD" this:StandaloneRefund.in_merchanttoken="B3D50B55-65CE-4B7B-8FE5-AB1B4F5CEDA7" this:StandaloneRefund.str_in_CVV="123" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:ca="clr-namespace:CommonLibrary.Asset;assembly=CommonLibrary" xmlns:cr="clr-namespace:CommonLibrary.Report;assembly=CommonLibrary" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uta="clr-namespace:UiPath.Testing.Activities;assembly=UiPath.Testing.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="StandaloneRefund" this:StandaloneRefund.str_in_Expiry="11/33" this:StandaloneRefund.str_in_CardNumber="4111111111111110" this:StandaloneRefund.dbl_in_Amount="1" this:StandaloneRefund.str_in_currency="USD" this:StandaloneRefund.in_merchanttoken="B3D50B55-65CE-4B7B-8FE5-AB1B4F5CEDA7" this:StandaloneRefund.str_in_CVV="123" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:ca="clr-namespace:CommonLibrary.Asset;assembly=CommonLibrary" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:ra="clr-namespace:ReporterForUiPath.Activities;assembly=ReporterForUiPath.Activities" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uta="clr-namespace:UiPath.Testing.Activities;assembly=UiPath.Testing.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="str_in_Expiry" Type="InArgument(x:String)" />
     <x:Property Name="str_in_CardNumber" Type="InArgument(x:String)" />
@@ -17,7 +17,7 @@
     <InArgument x:TypeArguments="x:String" />
   </this:StandaloneRefund.out_TestID>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>881.3333333333334,3151.3333333333335</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>844,3641.3333333333335</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -59,6 +59,8 @@
       <x:String>UiPath.Testing.Activities</x:String>
       <x:String>UiPath.Shared.Activities</x:String>
       <x:String>CommonLibrary.Report</x:String>
+      <x:String>ReporterForUiPath.Enums</x:String>
+      <x:String>ReporterForUiPath.Activities</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -125,22 +127,23 @@
       <AssemblyReference>System.Memory</AssemblyReference>
       <AssemblyReference>System.Private.Uri</AssemblyReference>
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>ReporterForUiPath</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="StandaloneRefund" sap:VirtualizedContainerService.HintSize="596.6666666666666,4471.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="StandaloneRefund" sap:VirtualizedContainerService.HintSize="596.6666666666666,3576.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="534.6666666666666,4360.666666666667" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="534.6666666666666,3466" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <Sequence DisplayName="Refund" sap:VirtualizedContainerService.HintSize="496,4121.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence DisplayName="Refund" sap:VirtualizedContainerService.HintSize="496,3226.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <Sequence.Variables>
             <Variable x:TypeArguments="njl:JObject" Name="jsonDocument" />
             <Variable x:TypeArguments="x:String" Name="restResponse" />
@@ -275,10 +278,10 @@
               </InArgument>
             </uta:VerifyExpression.Expression>
           </uta:VerifyExpression>
-          <If sap:VirtualizedContainerService.HintSize="434,419.3333333333333" sap2010:WorkflowViewState.IdRef="If_1">
+          <If sap:VirtualizedContainerService.HintSize="434,909.3333333333334" sap2010:WorkflowViewState.IdRef="If_8">
             <If.Condition>
               <InArgument x:TypeArguments="x:Boolean">
-                <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_9">statusCode.Equals(200) == true</CSharpValue>
+                <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_103">statusCode.Equals(200) == true</CSharpValue>
               </InArgument>
             </If.Condition>
             <sap:WorkflowViewStateService.ViewState>
@@ -288,66 +291,63 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <If.Then>
-              <Sequence sap:VirtualizedContainerService.HintSize="376,536.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_3">
+              <Sequence sap:VirtualizedContainerService.HintSize="376,408" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                <Sequence.Variables>
+                  <Variable x:TypeArguments="x:String" Name="str_in_testId" />
+                </Sequence.Variables>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,54" sap2010:WorkflowViewState.IdRef="LogMessage_1">
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_16">
                   <ui:LogMessage.Level>
                     <InArgument x:TypeArguments="ui:LogLevel">
-                      <CSharpValue x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="CSharpValue`1_10">UiPath.Core.Activities.LogLevel.Info</CSharpValue>
+                      <CSharpValue x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="CSharpValue`1_104">UiPath.Core.Activities.LogLevel.Info</CSharpValue>
                     </InArgument>
                   </ui:LogMessage.Level>
                   <ui:LogMessage.Message>
                     <InArgument x:TypeArguments="x:Object">
-                      <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_11">"Response - 200"</CSharpValue>
+                      <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_105">"Response - 200"</CSharpValue>
                     </InArgument>
                   </ui:LogMessage.Message>
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                </ui:LogMessage>
-                <cr:passedStep Actual_Result="Response generated as 200" Expected_Result="Response generated should be 200" sap:VirtualizedContainerService.HintSize="334,355.3333333333333" sap2010:WorkflowViewState.IdRef="passedStep_1" str_in_actualStep="Response code verification for Standalone Refund Payment" str_in_expectedStep="Step ">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <cr:passedStep.str_in_reportId>
+                </ui:LogMessage>
+                <ra:StepStatus CodeBlock="{x:Null}" ContinueOnError="{x:Null}" statusInfo="{x:Null}" ActualResult="Response generated as 200" DisplayName="Step Status Pass" ExpectedResult="Response generated should be 200" sap:VirtualizedContainerService.HintSize="334,136" sap2010:WorkflowViewState.IdRef="StepStatus_1" Status="Pass" StepDescription="Response code verification for Standalone Refund Payment" StepName="Step " TakeScreenshot="False">
+                  <ra:StepStatus.ReportId>
                     <InArgument x:TypeArguments="x:Int32">
-                      <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_12">in_ReportID</CSharpValue>
+                      <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_106">in_ReportID</CSharpValue>
                     </InArgument>
-                  </cr:passedStep.str_in_reportId>
-                  <cr:passedStep.str_in_testId>
+                  </ra:StepStatus.ReportId>
+                  <ra:StepStatus.TestId>
                     <InArgument x:TypeArguments="x:String">
-                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_13">out_TestID</CSharpValue>
+                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_107">out_TestID</CSharpValue>
                     </InArgument>
-                  </cr:passedStep.str_in_testId>
-                </cr:passedStep>
+                  </ra:StepStatus.TestId>
+                </ra:StepStatus>
               </Sequence>
             </If.Then>
             <If.Else>
-              <Sequence sap:VirtualizedContainerService.HintSize="300,235.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_8">
+              <Sequence sap:VirtualizedContainerService.HintSize="376,317.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_19">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="258,54" sap2010:WorkflowViewState.IdRef="LogMessage_2">
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,54" sap2010:WorkflowViewState.IdRef="LogMessage_17">
                   <ui:LogMessage.Level>
                     <InArgument x:TypeArguments="ui:LogLevel">
-                      <CSharpValue x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="CSharpValue`1_14">UiPath.Core.Activities.LogLevel.Info</CSharpValue>
+                      <CSharpValue x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="CSharpValue`1_108">UiPath.Core.Activities.LogLevel.Info</CSharpValue>
                     </InArgument>
                   </ui:LogMessage.Level>
                   <ui:LogMessage.Message>
                     <InArgument x:TypeArguments="x:Object">
-                      <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_15">"Failed to generate response 200"</CSharpValue>
+                      <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_109">"Failed to generate response 200"</CSharpValue>
                     </InArgument>
                   </ui:LogMessage.Message>
                   <sap:WorkflowViewStateService.ViewState>
@@ -357,24 +357,23 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:LogMessage>
-                <cr:failedStep Actual_Result="Failed to generate response 200" Expected_Result="Response generated should be 200" sap:VirtualizedContainerService.HintSize="258,54" sap2010:WorkflowViewState.IdRef="failedStep_1" str_in_actualStep="Response code verification for Standalone Refund Payment" str_in_expectedStep="Step ">
+                <ra:StepStatus CodeBlock="{x:Null}" ContinueOnError="{x:Null}" statusInfo="{x:Null}" ActualResult="Failed to generate response 200" DisplayName="Step Status Fail" ExpectedResult="Response generated should be 200" sap:VirtualizedContainerService.HintSize="334,136" sap2010:WorkflowViewState.IdRef="StepStatus_2" Status="Fail" StepDescription="Response code verification for Standalone Refund Payment" StepName="Step " TakeScreenshot="False">
+                  <ra:StepStatus.ReportId>
+                    <InArgument x:TypeArguments="x:Int32">
+                      <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_110">in_ReportID</CSharpValue>
+                    </InArgument>
+                  </ra:StepStatus.ReportId>
+                  <ra:StepStatus.TestId>
+                    <InArgument x:TypeArguments="x:String">
+                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_111">out_TestID</CSharpValue>
+                    </InArgument>
+                  </ra:StepStatus.TestId>
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <cr:failedStep.str_in_reportId>
-                    <InArgument x:TypeArguments="x:Int32">
-                      <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_16">in_ReportID</CSharpValue>
-                    </InArgument>
-                  </cr:failedStep.str_in_reportId>
-                  <cr:failedStep.str_in_testId>
-                    <InArgument x:TypeArguments="x:String">
-                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_17">out_TestID</CSharpValue>
-                    </InArgument>
-                  </cr:failedStep.str_in_testId>
-                </cr:failedStep>
+                </ra:StepStatus>
               </Sequence>
             </If.Else>
           </If>
@@ -412,10 +411,10 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </uta:VerifyExpression>
-          <If sap:VirtualizedContainerService.HintSize="434,54" sap2010:WorkflowViewState.IdRef="If_5">
+          <If sap:VirtualizedContainerService.HintSize="434,54" sap2010:WorkflowViewState.IdRef="If_9">
             <If.Condition>
               <InArgument x:TypeArguments="x:Boolean">
-                <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_58">string.IsNullOrEmpty(paymentID) == false</CSharpValue>
+                <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_112">string.IsNullOrEmpty(paymentID) == false</CSharpValue>
               </InArgument>
             </If.Condition>
             <sap:WorkflowViewStateService.ViewState>
@@ -425,7 +424,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <If.Then>
-              <Sequence sap:VirtualizedContainerService.HintSize="376,627.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_12">
+              <Sequence sap:VirtualizedContainerService.HintSize="376,408" sap2010:WorkflowViewState.IdRef="Sequence_20">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="x:String" Name="str_in_testId" />
                 </Sequence.Variables>
@@ -434,15 +433,15 @@
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_10">
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_18">
                   <ui:LogMessage.Level>
                     <InArgument x:TypeArguments="ui:LogLevel">
-                      <CSharpValue x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="CSharpValue`1_59">UiPath.Core.Activities.LogLevel.Info</CSharpValue>
+                      <CSharpValue x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="CSharpValue`1_113">UiPath.Core.Activities.LogLevel.Info</CSharpValue>
                     </InArgument>
                   </ui:LogMessage.Level>
                   <ui:LogMessage.Message>
                     <InArgument x:TypeArguments="x:Object">
-                      <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_60">"Payment ID is generated in Response body"</CSharpValue>
+                      <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_114">"Payment ID is generated in Response body"</CSharpValue>
                     </InArgument>
                   </ui:LogMessage.Message>
                   <sap:WorkflowViewStateService.ViewState>
@@ -451,57 +450,51 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:LogMessage>
-                <cr:passedStep sap:VirtualizedContainerService.HintSize="334,355.3333333333333" sap2010:WorkflowViewState.IdRef="passedStep_5" str_in_expectedStep="Step ">
-                  <cr:passedStep.Actual_Result>
+                <ra:StepStatus CodeBlock="{x:Null}" ContinueOnError="{x:Null}" statusInfo="{x:Null}" DisplayName="Step Status Pass" sap:VirtualizedContainerService.HintSize="334,136" sap2010:WorkflowViewState.IdRef="StepStatus_3" Status="Pass" StepName="Step " TakeScreenshot="False">
+                  <ra:StepStatus.ActualResult>
                     <InArgument x:TypeArguments="x:String">
-                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_61">"Payment ID Generated Successfully for "+td_output</CSharpValue>
+                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_115">"Payment ID Generated Successfully for "+td_output</CSharpValue>
                     </InArgument>
-                  </cr:passedStep.Actual_Result>
-                  <cr:passedStep.Expected_Result>
+                  </ra:StepStatus.ActualResult>
+                  <ra:StepStatus.ExpectedResult>
                     <InArgument x:TypeArguments="x:String">
-                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_62">"Payment ID should be generated in response body for "+td_output</CSharpValue>
+                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_116">"Payment ID should be generated in response body for "+td_output</CSharpValue>
                     </InArgument>
-                  </cr:passedStep.Expected_Result>
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <cr:passedStep.str_in_actualStep>
-                    <InArgument x:TypeArguments="x:String">
-                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_63">"Payment ID verification for "+td_output</CSharpValue>
-                    </InArgument>
-                  </cr:passedStep.str_in_actualStep>
-                  <cr:passedStep.str_in_reportId>
+                  </ra:StepStatus.ExpectedResult>
+                  <ra:StepStatus.ReportId>
                     <InArgument x:TypeArguments="x:Int32">
-                      <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_64">in_ReportID</CSharpValue>
+                      <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_118">in_ReportID</CSharpValue>
                     </InArgument>
-                  </cr:passedStep.str_in_reportId>
-                  <cr:passedStep.str_in_testId>
+                  </ra:StepStatus.ReportId>
+                  <ra:StepStatus.StepDescription>
                     <InArgument x:TypeArguments="x:String">
-                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_65">out_TestID</CSharpValue>
+                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_117">"Payment ID verification for " +td_output</CSharpValue>
                     </InArgument>
-                  </cr:passedStep.str_in_testId>
-                </cr:passedStep>
+                  </ra:StepStatus.StepDescription>
+                  <ra:StepStatus.TestId>
+                    <InArgument x:TypeArguments="x:String">
+                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_119">out_TestID</CSharpValue>
+                    </InArgument>
+                  </ra:StepStatus.TestId>
+                </ra:StepStatus>
               </Sequence>
             </If.Then>
             <If.Else>
-              <Sequence sap:VirtualizedContainerService.HintSize="376,627.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_13">
+              <Sequence sap:VirtualizedContainerService.HintSize="376,408" sap2010:WorkflowViewState.IdRef="Sequence_23">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_11">
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_19">
                   <ui:LogMessage.Level>
                     <InArgument x:TypeArguments="ui:LogLevel">
-                      <CSharpValue x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="CSharpValue`1_66">UiPath.Core.Activities.LogLevel.Error</CSharpValue>
+                      <CSharpValue x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="CSharpValue`1_120">UiPath.Core.Activities.LogLevel.Error</CSharpValue>
                     </InArgument>
                   </ui:LogMessage.Level>
                   <ui:LogMessage.Message>
                     <InArgument x:TypeArguments="x:Object">
-                      <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_67">"Failed to generate payment ID"</CSharpValue>
+                      <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_121">"Failed to generate payment ID"</CSharpValue>
                     </InArgument>
                   </ui:LogMessage.Message>
                   <sap:WorkflowViewStateService.ViewState>
@@ -511,38 +504,33 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:LogMessage>
-                <cr:failedStep sap:VirtualizedContainerService.HintSize="334,355.3333333333333" sap2010:WorkflowViewState.IdRef="failedStep_5" str_in_expectedStep="Step ">
-                  <cr:failedStep.Actual_Result>
+                <ra:StepStatus CodeBlock="{x:Null}" ContinueOnError="{x:Null}" statusInfo="{x:Null}" DisplayName="Step Status Fail" sap:VirtualizedContainerService.HintSize="334,136" sap2010:WorkflowViewState.IdRef="StepStatus_4" Status="Fail" StepName="Step " TakeScreenshot="False">
+                  <ra:StepStatus.ActualResult>
                     <InArgument x:TypeArguments="x:String">
-                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_68">"Failed to generate Payment ID for "+td_output</CSharpValue>
+                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_122">"Failed to generate Payment ID for "+td_output</CSharpValue>
                     </InArgument>
-                  </cr:failedStep.Actual_Result>
-                  <cr:failedStep.Expected_Result>
+                  </ra:StepStatus.ActualResult>
+                  <ra:StepStatus.ExpectedResult>
                     <InArgument x:TypeArguments="x:String">
-                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_69">"Payment ID should be generated in response body for "+td_output</CSharpValue>
+                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_123">"Payment ID should be generated in response body for "+td_output</CSharpValue>
                     </InArgument>
-                  </cr:failedStep.Expected_Result>
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <cr:failedStep.str_in_actualStep>
-                    <InArgument x:TypeArguments="x:String">
-                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_70">"Payment ID verification for "+td_output</CSharpValue>
-                    </InArgument>
-                  </cr:failedStep.str_in_actualStep>
-                  <cr:failedStep.str_in_reportId>
+                  </ra:StepStatus.ExpectedResult>
+                  <ra:StepStatus.ReportId>
                     <InArgument x:TypeArguments="x:Int32">
-                      <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_71">in_ReportID</CSharpValue>
+                      <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_125">in_ReportID</CSharpValue>
                     </InArgument>
-                  </cr:failedStep.str_in_reportId>
-                  <cr:failedStep.str_in_testId>
+                  </ra:StepStatus.ReportId>
+                  <ra:StepStatus.StepDescription>
                     <InArgument x:TypeArguments="x:String">
-                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_72">out_TestID</CSharpValue>
+                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_124">"Payment ID verification for "+td_output</CSharpValue>
                     </InArgument>
-                  </cr:failedStep.str_in_testId>
-                </cr:failedStep>
+                  </ra:StepStatus.StepDescription>
+                  <ra:StepStatus.TestId>
+                    <InArgument x:TypeArguments="x:String">
+                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_126">out_TestID</CSharpValue>
+                    </InArgument>
+                  </ra:StepStatus.TestId>
+                </ra:StepStatus>
               </Sequence>
             </If.Else>
           </If>
@@ -570,10 +558,10 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </uta:VerifyExpression>
-          <If sap:VirtualizedContainerService.HintSize="434,54" sap2010:WorkflowViewState.IdRef="If_6">
+          <If sap:VirtualizedContainerService.HintSize="434,54" sap2010:WorkflowViewState.IdRef="If_10">
             <If.Condition>
               <InArgument x:TypeArguments="x:Boolean">
-                <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_73">amountApproved.Contains(dbl_in_Amount.ToString()) == true</CSharpValue>
+                <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_127">amountApproved.Contains(dbl_in_Amount.ToString()) == true</CSharpValue>
               </InArgument>
             </If.Condition>
             <sap:WorkflowViewStateService.ViewState>
@@ -583,7 +571,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <If.Then>
-              <Sequence sap:VirtualizedContainerService.HintSize="376,627.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_14">
+              <Sequence sap:VirtualizedContainerService.HintSize="376,408" sap2010:WorkflowViewState.IdRef="Sequence_21">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="x:String" Name="str_in_testId" />
                 </Sequence.Variables>
@@ -592,15 +580,15 @@
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_12">
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_20">
                   <ui:LogMessage.Level>
                     <InArgument x:TypeArguments="ui:LogLevel">
-                      <CSharpValue x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="CSharpValue`1_74">UiPath.Core.Activities.LogLevel.Info</CSharpValue>
+                      <CSharpValue x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="CSharpValue`1_128">UiPath.Core.Activities.LogLevel.Info</CSharpValue>
                     </InArgument>
                   </ui:LogMessage.Level>
                   <ui:LogMessage.Message>
                     <InArgument x:TypeArguments="x:Object">
-                      <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_75">"Amount matches with the given amount"</CSharpValue>
+                      <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_129">"Amount matches with the given amount"</CSharpValue>
                     </InArgument>
                   </ui:LogMessage.Message>
                   <sap:WorkflowViewStateService.ViewState>
@@ -609,57 +597,51 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:LogMessage>
-                <cr:passedStep sap:VirtualizedContainerService.HintSize="334,355.3333333333333" sap2010:WorkflowViewState.IdRef="passedStep_6" str_in_expectedStep="Step ">
-                  <cr:passedStep.Actual_Result>
+                <ra:StepStatus CodeBlock="{x:Null}" ContinueOnError="{x:Null}" statusInfo="{x:Null}" DisplayName="Step Status Pass" sap:VirtualizedContainerService.HintSize="334,136" sap2010:WorkflowViewState.IdRef="StepStatus_5" Status="Pass" StepName="Step " TakeScreenshot="False">
+                  <ra:StepStatus.ActualResult>
                     <InArgument x:TypeArguments="x:String">
-                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_76" xml:space="preserve">"Amount given matches with the response amount value  for "+td_output</CSharpValue>
+                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_130">"Amount given matches with the response amount value for "+td_output</CSharpValue>
                     </InArgument>
-                  </cr:passedStep.Actual_Result>
-                  <cr:passedStep.Expected_Result>
+                  </ra:StepStatus.ActualResult>
+                  <ra:StepStatus.ExpectedResult>
                     <InArgument x:TypeArguments="x:String">
-                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_77" xml:space="preserve">"Amount given should match with the response amount  for "+td_output</CSharpValue>
+                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_131" xml:space="preserve">"Amount given should match with the response amount  for "+td_output</CSharpValue>
                     </InArgument>
-                  </cr:passedStep.Expected_Result>
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <cr:passedStep.str_in_actualStep>
-                    <InArgument x:TypeArguments="x:String">
-                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_78" xml:space="preserve">"Amount verification  for "+td_output</CSharpValue>
-                    </InArgument>
-                  </cr:passedStep.str_in_actualStep>
-                  <cr:passedStep.str_in_reportId>
+                  </ra:StepStatus.ExpectedResult>
+                  <ra:StepStatus.ReportId>
                     <InArgument x:TypeArguments="x:Int32">
-                      <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_79">in_ReportID</CSharpValue>
+                      <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_133">in_ReportID</CSharpValue>
                     </InArgument>
-                  </cr:passedStep.str_in_reportId>
-                  <cr:passedStep.str_in_testId>
+                  </ra:StepStatus.ReportId>
+                  <ra:StepStatus.StepDescription>
                     <InArgument x:TypeArguments="x:String">
-                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_80">out_TestID</CSharpValue>
+                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_132">"Amount verification for "+td_output</CSharpValue>
                     </InArgument>
-                  </cr:passedStep.str_in_testId>
-                </cr:passedStep>
+                  </ra:StepStatus.StepDescription>
+                  <ra:StepStatus.TestId>
+                    <InArgument x:TypeArguments="x:String">
+                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_134">out_TestID</CSharpValue>
+                    </InArgument>
+                  </ra:StepStatus.TestId>
+                </ra:StepStatus>
               </Sequence>
             </If.Then>
             <If.Else>
-              <Sequence sap:VirtualizedContainerService.HintSize="376,627.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_16">
+              <Sequence sap:VirtualizedContainerService.HintSize="376,408" sap2010:WorkflowViewState.IdRef="Sequence_24">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_13">
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_21">
                   <ui:LogMessage.Level>
                     <InArgument x:TypeArguments="ui:LogLevel">
-                      <CSharpValue x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="CSharpValue`1_81">UiPath.Core.Activities.LogLevel.Error</CSharpValue>
+                      <CSharpValue x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="CSharpValue`1_135">UiPath.Core.Activities.LogLevel.Error</CSharpValue>
                     </InArgument>
                   </ui:LogMessage.Level>
                   <ui:LogMessage.Message>
                     <InArgument x:TypeArguments="x:Object">
-                      <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_82">"Failed to verify amount"</CSharpValue>
+                      <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_136">"Failed to verify amount"</CSharpValue>
                     </InArgument>
                   </ui:LogMessage.Message>
                   <sap:WorkflowViewStateService.ViewState>
@@ -669,38 +651,33 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:LogMessage>
-                <cr:failedStep sap:VirtualizedContainerService.HintSize="334,355.3333333333333" sap2010:WorkflowViewState.IdRef="failedStep_6" str_in_expectedStep="Step ">
-                  <cr:failedStep.Actual_Result>
+                <ra:StepStatus CodeBlock="{x:Null}" ContinueOnError="{x:Null}" statusInfo="{x:Null}" DisplayName="Step Status Fail" sap:VirtualizedContainerService.HintSize="334,136" sap2010:WorkflowViewState.IdRef="StepStatus_6" Status="Fail" StepName="Step " TakeScreenshot="False">
+                  <ra:StepStatus.ActualResult>
                     <InArgument x:TypeArguments="x:String">
-                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_83" xml:space="preserve">"Amount given doesn't match with the response amount  for "+td_output</CSharpValue>
+                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_137" xml:space="preserve">"Amount given doesn't match with the response amount  for "+td_output</CSharpValue>
                     </InArgument>
-                  </cr:failedStep.Actual_Result>
-                  <cr:failedStep.Expected_Result>
+                  </ra:StepStatus.ActualResult>
+                  <ra:StepStatus.ExpectedResult>
                     <InArgument x:TypeArguments="x:String">
-                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_84" xml:space="preserve">"Amount given should match with the response amount  for "+td_output</CSharpValue>
+                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_138" xml:space="preserve">"Amount given should match with the response amount  for "+td_output</CSharpValue>
                     </InArgument>
-                  </cr:failedStep.Expected_Result>
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <cr:failedStep.str_in_actualStep>
-                    <InArgument x:TypeArguments="x:String">
-                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_85" xml:space="preserve">"Amount verification  for "+td_output</CSharpValue>
-                    </InArgument>
-                  </cr:failedStep.str_in_actualStep>
-                  <cr:failedStep.str_in_reportId>
+                  </ra:StepStatus.ExpectedResult>
+                  <ra:StepStatus.ReportId>
                     <InArgument x:TypeArguments="x:Int32">
-                      <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_86">in_ReportID</CSharpValue>
+                      <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_140">in_ReportID</CSharpValue>
                     </InArgument>
-                  </cr:failedStep.str_in_reportId>
-                  <cr:failedStep.str_in_testId>
+                  </ra:StepStatus.ReportId>
+                  <ra:StepStatus.StepDescription>
                     <InArgument x:TypeArguments="x:String">
-                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_87">out_TestID</CSharpValue>
+                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_139">"Amount verification for "+td_output</CSharpValue>
                     </InArgument>
-                  </cr:failedStep.str_in_testId>
-                </cr:failedStep>
+                  </ra:StepStatus.StepDescription>
+                  <ra:StepStatus.TestId>
+                    <InArgument x:TypeArguments="x:String">
+                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_141">out_TestID</CSharpValue>
+                    </InArgument>
+                  </ra:StepStatus.TestId>
+                </ra:StepStatus>
               </Sequence>
             </If.Else>
           </If>
@@ -728,10 +705,10 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </uta:VerifyExpression>
-          <If sap:VirtualizedContainerService.HintSize="410,1438.6666666666667" sap2010:WorkflowViewState.IdRef="If_7">
+          <If sap:VirtualizedContainerService.HintSize="434,54" sap2010:WorkflowViewState.IdRef="If_11">
             <If.Condition>
               <InArgument x:TypeArguments="x:Boolean">
-                <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_88">string.IsNullOrEmpty(authResponse) == false</CSharpValue>
+                <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_142">string.IsNullOrEmpty(authResponse) == false</CSharpValue>
               </InArgument>
             </If.Condition>
             <sap:WorkflowViewStateService.ViewState>
@@ -741,7 +718,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <If.Then>
-              <Sequence sap:VirtualizedContainerService.HintSize="376,627.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_15">
+              <Sequence sap:VirtualizedContainerService.HintSize="376,408" sap2010:WorkflowViewState.IdRef="Sequence_22">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="x:String" Name="str_in_testId" />
                 </Sequence.Variables>
@@ -750,15 +727,15 @@
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_14">
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_22">
                   <ui:LogMessage.Level>
                     <InArgument x:TypeArguments="ui:LogLevel">
-                      <CSharpValue x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="CSharpValue`1_89">UiPath.Core.Activities.LogLevel.Info</CSharpValue>
+                      <CSharpValue x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="CSharpValue`1_143">UiPath.Core.Activities.LogLevel.Info</CSharpValue>
                     </InArgument>
                   </ui:LogMessage.Level>
                   <ui:LogMessage.Message>
                     <InArgument x:TypeArguments="x:Object">
-                      <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_90">"Authorization code is generated"</CSharpValue>
+                      <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_144">"Authorization code is generated"</CSharpValue>
                     </InArgument>
                   </ui:LogMessage.Message>
                   <sap:WorkflowViewStateService.ViewState>
@@ -767,57 +744,51 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:LogMessage>
-                <cr:passedStep sap:VirtualizedContainerService.HintSize="334,355.3333333333333" sap2010:WorkflowViewState.IdRef="passedStep_7" str_in_expectedStep="Step ">
-                  <cr:passedStep.Actual_Result>
+                <ra:StepStatus CodeBlock="{x:Null}" ContinueOnError="{x:Null}" statusInfo="{x:Null}" DisplayName="Step Status Pass" sap:VirtualizedContainerService.HintSize="334,136" sap2010:WorkflowViewState.IdRef="StepStatus_7" Status="Pass" StepName="Step " TakeScreenshot="False">
+                  <ra:StepStatus.ActualResult>
                     <InArgument x:TypeArguments="x:String">
-                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_91">"Authorization code generated in response for "+td_output</CSharpValue>
+                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_145" xml:space="preserve">"Authorization code generated in response  for "+td_output</CSharpValue>
                     </InArgument>
-                  </cr:passedStep.Actual_Result>
-                  <cr:passedStep.Expected_Result>
+                  </ra:StepStatus.ActualResult>
+                  <ra:StepStatus.ExpectedResult>
                     <InArgument x:TypeArguments="x:String">
-                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_92">"Authorization code should be generated in response for "+td_output</CSharpValue>
+                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_146" xml:space="preserve">"Authorization code should be generated in response  for "+td_output</CSharpValue>
                     </InArgument>
-                  </cr:passedStep.Expected_Result>
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <cr:passedStep.str_in_actualStep>
-                    <InArgument x:TypeArguments="x:String">
-                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_93">"Authorization code verification for "+td_output</CSharpValue>
-                    </InArgument>
-                  </cr:passedStep.str_in_actualStep>
-                  <cr:passedStep.str_in_reportId>
+                  </ra:StepStatus.ExpectedResult>
+                  <ra:StepStatus.ReportId>
                     <InArgument x:TypeArguments="x:Int32">
-                      <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_94">in_ReportID</CSharpValue>
+                      <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_148">in_ReportID</CSharpValue>
                     </InArgument>
-                  </cr:passedStep.str_in_reportId>
-                  <cr:passedStep.str_in_testId>
+                  </ra:StepStatus.ReportId>
+                  <ra:StepStatus.StepDescription>
                     <InArgument x:TypeArguments="x:String">
-                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_95">out_TestID</CSharpValue>
+                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_147" xml:space="preserve">"Authorization code verification  for "+td_output</CSharpValue>
                     </InArgument>
-                  </cr:passedStep.str_in_testId>
-                </cr:passedStep>
+                  </ra:StepStatus.StepDescription>
+                  <ra:StepStatus.TestId>
+                    <InArgument x:TypeArguments="x:String">
+                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_149">out_TestID</CSharpValue>
+                    </InArgument>
+                  </ra:StepStatus.TestId>
+                </ra:StepStatus>
               </Sequence>
             </If.Then>
             <If.Else>
-              <Sequence sap:VirtualizedContainerService.HintSize="376,627.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_17">
+              <Sequence sap:VirtualizedContainerService.HintSize="376,408" sap2010:WorkflowViewState.IdRef="Sequence_25">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_15">
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_23">
                   <ui:LogMessage.Level>
                     <InArgument x:TypeArguments="ui:LogLevel">
-                      <CSharpValue x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="CSharpValue`1_96">UiPath.Core.Activities.LogLevel.Error</CSharpValue>
+                      <CSharpValue x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="CSharpValue`1_150">UiPath.Core.Activities.LogLevel.Error</CSharpValue>
                     </InArgument>
                   </ui:LogMessage.Level>
                   <ui:LogMessage.Message>
                     <InArgument x:TypeArguments="x:Object">
-                      <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_97">"Failed to generate Authorization code"</CSharpValue>
+                      <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_151">"Failed to generate Authorization code"</CSharpValue>
                     </InArgument>
                   </ui:LogMessage.Message>
                   <sap:WorkflowViewStateService.ViewState>
@@ -827,38 +798,33 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:LogMessage>
-                <cr:failedStep sap:VirtualizedContainerService.HintSize="334,355.3333333333333" sap2010:WorkflowViewState.IdRef="failedStep_7" str_in_expectedStep="Step ">
-                  <cr:failedStep.Actual_Result>
+                <ra:StepStatus CodeBlock="{x:Null}" ContinueOnError="{x:Null}" statusInfo="{x:Null}" DisplayName="Step Status Fail" sap:VirtualizedContainerService.HintSize="334,136" sap2010:WorkflowViewState.IdRef="StepStatus_8" Status="Fail" StepName="Step " TakeScreenshot="False">
+                  <ra:StepStatus.ActualResult>
                     <InArgument x:TypeArguments="x:String">
-                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_98">"Failed to generate authorization code for "+td_output</CSharpValue>
+                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_152" xml:space="preserve">"Failed to generate authorization code  for "+td_output</CSharpValue>
                     </InArgument>
-                  </cr:failedStep.Actual_Result>
-                  <cr:failedStep.Expected_Result>
+                  </ra:StepStatus.ActualResult>
+                  <ra:StepStatus.ExpectedResult>
                     <InArgument x:TypeArguments="x:String">
-                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_99">"Authorization code should be generated in response for "+td_output</CSharpValue>
+                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_153" xml:space="preserve">"Authorization code should be generated in response  for "+td_output</CSharpValue>
                     </InArgument>
-                  </cr:failedStep.Expected_Result>
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <cr:failedStep.str_in_actualStep>
-                    <InArgument x:TypeArguments="x:String">
-                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_100">"Authorization code verification for "+td_output</CSharpValue>
-                    </InArgument>
-                  </cr:failedStep.str_in_actualStep>
-                  <cr:failedStep.str_in_reportId>
+                  </ra:StepStatus.ExpectedResult>
+                  <ra:StepStatus.ReportId>
                     <InArgument x:TypeArguments="x:Int32">
-                      <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_101">in_ReportID</CSharpValue>
+                      <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_155">in_ReportID</CSharpValue>
                     </InArgument>
-                  </cr:failedStep.str_in_reportId>
-                  <cr:failedStep.str_in_testId>
+                  </ra:StepStatus.ReportId>
+                  <ra:StepStatus.StepDescription>
                     <InArgument x:TypeArguments="x:String">
-                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_102">out_TestID</CSharpValue>
+                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_154" xml:space="preserve">"Authorization code verification  for "+td_output</CSharpValue>
                     </InArgument>
-                  </cr:failedStep.str_in_testId>
-                </cr:failedStep>
+                  </ra:StepStatus.StepDescription>
+                  <ra:StepStatus.TestId>
+                    <InArgument x:TypeArguments="x:String">
+                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_156">out_TestID</CSharpValue>
+                    </InArgument>
+                  </ra:StepStatus.TestId>
+                </ra:StepStatus>
               </Sequence>
             </If.Else>
           </If>

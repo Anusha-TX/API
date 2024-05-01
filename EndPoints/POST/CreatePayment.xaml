@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Opportunity" this:Opportunity.in_merchanttoken="533410DC-3B74-4B78-9170-ECC13BEE8309" this:Opportunity.str_in_FirstName="Dale" this:Opportunity.str_in_LastName="John" this:Opportunity.str_in_CustomerAddress="Address123" this:Opportunity.str_in_CustomerZipCode="12334" this:Opportunity.str_in_CustomerCity="city" this:Opportunity.str_in_CustomerSateCode="state" this:Opportunity.str_in_CustomerCountryCode="country" this:Opportunity.str_in_CustPhoneNumber="650-555-1234" this:Opportunity.str_in_CustEmail="test@test.com" this:Opportunity.dbl_in_Amount="1" this:Opportunity.str_in_PaymentMethodValue2="987654321" this:Opportunity.str_in_PaymentMethodValue1="026009593" this:Opportunity.str_in_PaymentMethod="ach" this:Opportunity.str_in_PaymentMethodKey1="accountNumber" this:Opportunity.str_in_PaymentMethodKey2="routingNumber" this:Opportunity.str_in_PaymentMethodValue3="Checking" this:Opportunity.str_in_PaymentMethodKey3="accountType" this:Opportunity.str_in_EndDate="10/25/2025" this:Opportunity.str_in_Frequency="Daily" this:Opportunity.str_in_PaymentDay="Sunday" this:Opportunity.int_in_PaymentMonth="10" this:Opportunity.str_in_Active="true" this:Opportunity.str_in_Currency="USD" this:Opportunity.str_in_Endpoint="subscriptions" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:ca="clr-namespace:CommonLibrary.Asset;assembly=CommonLibrary" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:ra="clr-namespace:ReporterForUiPath.Activities;assembly=ReporterForUiPath.Activities" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uta="clr-namespace:UiPath.Testing.Activities;assembly=UiPath.Testing.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Opportunity" this:Opportunity.in_merchanttoken="533410DC-3B74-4B78-9170-ECC13BEE8309" this:Opportunity.str_in_FirstName="Dale" this:Opportunity.str_in_LastName="John" this:Opportunity.str_in_CustomerAddress="Address123" this:Opportunity.str_in_CustomerZipCode="12334" this:Opportunity.str_in_CustomerCity="city" this:Opportunity.str_in_CustomerSateCode="state" this:Opportunity.str_in_CustomerCountryCode="country" this:Opportunity.str_in_CustPhoneNumber="650-555-1234" this:Opportunity.str_in_CustEmail="test@test.com" this:Opportunity.dbl_in_Amount="1" this:Opportunity.str_in_PaymentMethodValue2="123456789" this:Opportunity.str_in_PaymentMethodValue1="987654321" this:Opportunity.str_in_PaymentMethod="ach" this:Opportunity.str_in_PaymentMethodKey1="accountNumber" this:Opportunity.str_in_PaymentMethodKey2="routingNumber" this:Opportunity.str_in_PaymentMethodValue3="Checking" this:Opportunity.str_in_PaymentMethodKey3="accountType" this:Opportunity.str_in_Currency="USD" this:Opportunity.str_in_Endpoint="payments" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:ca="clr-namespace:CommonLibrary.Asset;assembly=CommonLibrary" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:ra="clr-namespace:ReporterForUiPath.Activities;assembly=ReporterForUiPath.Activities" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uta="clr-namespace:UiPath.Testing.Activities;assembly=UiPath.Testing.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_token" Type="InArgument(x:String)" />
     <x:Property Name="in_merchanttoken" Type="InArgument(x:String)" />
@@ -41,14 +41,9 @@
   <this:Opportunity.str_in_TestCase>
     <InArgument x:TypeArguments="x:String" />
   </this:Opportunity.str_in_TestCase>
-  <this:Opportunity.str_in_StartDate>
-    <InArgument x:TypeArguments="x:String">
-      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_198">DateTime.Now.ToString("MM/dd/yy")</CSharpValue>
-    </InArgument>
-  </this:Opportunity.str_in_StartDate>
   <sap2010:Annotation.AnnotationText>UPTF00000088eyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8SW5pdGlhbFRvb2x0aXA+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8VmVyc2lvbj5rX19CYWNraW5nRmllbGQiOjF9</sap2010:Annotation.AnnotationText>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>849.3333333333334,2962.6666666666665</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>881.3333333333334,2973.3333333333335</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -167,21 +162,21 @@
       <x:Boolean x:Key="ShouldCollapseAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap:VirtualizedContainerService.HintSize="596.6666666666666,2879.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_15">
+  <Sequence sap:VirtualizedContainerService.HintSize="596.6666666666666,2908.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_15">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <x:Boolean x:Key="IsPinned">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="534.6666666666666,2768.6666666666665" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="534.6666666666666,2798" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsPinned">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <Sequence DisplayName="CreatePayment" sap:VirtualizedContainerService.HintSize="496,2374" sap2010:WorkflowViewState.IdRef="Sequence_1">
+        <Sequence DisplayName="CreatePayment" sap:VirtualizedContainerService.HintSize="496,2558.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_1">
           <Sequence.Variables>
             <Variable x:TypeArguments="njl:JObject" Name="jsonDocument" />
             <Variable x:TypeArguments="x:String" Name="restResponse" />
@@ -220,7 +215,7 @@
             </Assign.To>
             <Assign.Value>
               <InArgument x:TypeArguments="x:String">
-                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_199" xml:space="preserve">JObject.Parse(@"{
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_277" xml:space="preserve">JObject.Parse(@"{
     'amount': {'amount' : "+dbl_in_Amount+", 'currency' : '"+str_in_Currency+"'},'paymentMethod': { '"+str_in_PaymentMethod+"' : {'"+str_in_PaymentMethodKey1+"' : '"+str_in_PaymentMethodValue1+"', '"+str_in_PaymentMethodKey2+"' : '"+str_in_PaymentMethodValue2+"', '"+str_in_PaymentMethodKey3+"' : '"+str_in_PaymentMethodValue3+"'},'billingAddress': { 'firstName' : '"+str_in_FirstName+"', 'lastName' : '"+str_in_LastName+"', 'address' : '"+ str_in_CustomerAddress+"', 'postalCode' : '"+str_in_CustomerZipCode+"', 'city' : '"+str_in_CustomerCity+"', 'state' : '"+str_in_CustomerSateCode+"', 'country' : '"+str_in_CustomerCountryCode+"', 'phone' : '"+str_in_CustPhoneNumber+"', 'email' : '"+str_in_CustEmail+"'}},'subscription' : {'startDate' : '"+str_in_StartDate+"', 'endDate': '"+str_in_EndDate+"', 'frequency': '"+str_in_Frequency+"', 'active': "+str_in_Active+",'paymentDay': '"+str_in_PaymentDay+"', 'paymentMonth': "+int_in_PaymentMonth+"}}").ToString()</CSharpValue>
               </InArgument>
             </Assign.Value>
@@ -280,6 +275,23 @@
               </InArgument>
             </ui:DeserializeJson.JsonString>
           </ui:DeserializeJson>
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_28">
+            <ui:LogMessage.Level>
+              <InArgument x:TypeArguments="ui:LogLevel">
+                <CSharpValue x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="CSharpValue`1_275">UiPath.Core.Activities.LogLevel.Info</CSharpValue>
+              </InArgument>
+            </ui:LogMessage.Level>
+            <ui:LogMessage.Message>
+              <InArgument x:TypeArguments="x:Object">
+                <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_276">jsonDocument</CSharpValue>
+              </InArgument>
+            </ui:LogMessage.Message>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsPinned">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:LogMessage>
           <uta:VerifyExpression AlternativeVerificationTitle="{x:Null}" KeepScreenshots="{x:Null}" OutputMessageFormat="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" ContinueOnFailure="True" DisplayName="Verify Expression" sap:VirtualizedContainerService.HintSize="434,54" sap2010:WorkflowViewState.IdRef="VerifyExpression_5" TakeScreenshotInCaseOfFailingAssertion="False" TakeScreenshotInCaseOfSucceedingAssertion="False">
             <uta:VerifyExpression.Expression>
               <InArgument x:TypeArguments="x:Boolean">

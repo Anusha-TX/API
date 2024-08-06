@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="PaymentMethod" this:PaymentMethod.str_in_FirstName="Dale" this:PaymentMethod.in_merchanttoken="656AB81C-2791-4DAA-91A6-1929E9A42ADE" this:PaymentMethod.str_in_CardNumber="379761618727481" this:PaymentMethod.str_in_LastName="John" this:PaymentMethod.str_in_CustomerAddress="Address123" this:PaymentMethod.str_in_CustomerZipCode="12334" this:PaymentMethod.str_in_CustomerCity="city" this:PaymentMethod.str_in_CustomerSateCode="state" this:PaymentMethod.str_in_CustomerCountryCode="country" this:PaymentMethod.str_in_CustPhoneNumber="650-555-1234" this:PaymentMethod.str_in_CustEmail="test@test.com" this:PaymentMethod.str_in_Expiry="11/33" this:PaymentMethod.int_in_CustomerID="28808" this:PaymentMethod.str_in_PaymentMethod="Card" this:PaymentMethod.str_in_AccountType="Checking" this:PaymentMethod.str_in_AccountNumber="987654321" this:PaymentMethod.str_in_RoutingNumber="123456789" this:PaymentMethod.str_in_AccNickName="Test" this:PaymentMethod.str_in_Active="true" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:ca="clr-namespace:CommonLibrary.Asset;assembly=CommonLibrary" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:ra="clr-namespace:ReporterForUiPath.Activities;assembly=ReporterForUiPath.Activities" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uta="clr-namespace:UiPath.Testing.Activities;assembly=UiPath.Testing.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="PaymentMethod" this:PaymentMethod.str_in_FirstName="Dale" this:PaymentMethod.in_merchanttoken="656AB81C-2791-4DAA-91A6-1929E9A42ADE" this:PaymentMethod.str_in_CardNumber="378982849462984" this:PaymentMethod.str_in_LastName="John" this:PaymentMethod.str_in_CustomerAddress="Address123" this:PaymentMethod.str_in_CustomerZipCode="12334" this:PaymentMethod.str_in_CustomerCity="city" this:PaymentMethod.str_in_CustomerSateCode="state" this:PaymentMethod.str_in_CustomerCountryCode="country" this:PaymentMethod.str_in_CustPhoneNumber="650-555-1234" this:PaymentMethod.str_in_CustEmail="test@test.com" this:PaymentMethod.str_in_Expiry="11/33" this:PaymentMethod.int_in_CustomerID="28808" this:PaymentMethod.str_in_PaymentMethod="Card" this:PaymentMethod.str_in_AccountType="Checking" this:PaymentMethod.str_in_AccountNumber="987654321" this:PaymentMethod.str_in_RoutingNumber="123456789" this:PaymentMethod.str_in_AccNickName="Test" this:PaymentMethod.str_in_Active="true" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:ca="clr-namespace:CommonLibrary.Asset;assembly=CommonLibrary" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:ra="clr-namespace:ReporterForUiPath.Activities;assembly=ReporterForUiPath.Activities" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uta="clr-namespace:UiPath.Testing.Activities;assembly=UiPath.Testing.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="str_in_FirstName" Type="InArgument(x:String)" />
     <x:Property Name="in_token" Type="InArgument(x:String)" />
@@ -31,7 +31,7 @@
     <InArgument x:TypeArguments="x:String" />
   </this:PaymentMethod.out_TestID>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>845.3333333333334,2894</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>860,3262</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -144,20 +144,20 @@
       <AssemblyReference>DPP_APILibrary.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="PaymentMethod" sap:VirtualizedContainerService.HintSize="698.6666666666666,2829.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="PaymentMethod" sap:VirtualizedContainerService.HintSize="698.6666666666666,3197.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="636.6666666666666,2718.6666666666665" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="636.6666666666666,3086.6666666666665" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <Sequence DisplayName="CreatePayment" sap:VirtualizedContainerService.HintSize="598,2479.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence DisplayName="CreatePayment" sap:VirtualizedContainerService.HintSize="598,2847.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <Sequence.Variables>
             <Variable x:TypeArguments="njl:JObject" Name="jsonDocument" />
             <Variable x:TypeArguments="x:String" Name="restResponse" />
@@ -186,7 +186,7 @@
               </OutArgument>
             </ca:ReadAssetValue.str_out_AssetValue>
           </ca:ReadAssetValue>
-          <Switch x:TypeArguments="x:String" DisplayName="Switch" sap:VirtualizedContainerService.HintSize="536,170" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+          <Switch x:TypeArguments="x:String" DisplayName="Switch" sap:VirtualizedContainerService.HintSize="536,538" sap2010:WorkflowViewState.IdRef="Switch`1_1">
             <Switch.Expression>
               <InArgument x:TypeArguments="x:String">
                 <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_74">str_in_PaymentMethod</CSharpValue>
@@ -222,7 +222,7 @@
                 </Assign.Value>
               </Assign>
             </Sequence>
-            <Sequence x:Key="ACH" sap:VirtualizedContainerService.HintSize="496,318.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_11">
+            <Sequence x:Key="ACH" sap:VirtualizedContainerService.HintSize="496,322" sap2010:WorkflowViewState.IdRef="Sequence_11">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
